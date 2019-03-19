@@ -1,0 +1,61 @@
+{
+	"name": "szymonguzik.pl",
+	"private": true,
+	"description": "My personal gatsbyJS site",
+	"version": "0.1.0",
+	"author": "Szymon Guzik",
+	"dependencies": {
+		"gatsby": "^2.1.37",
+		"gatsby-image": "^2.0.34",
+		"gatsby-plugin-alias-imports": "^1.0.5",
+		"gatsby-plugin-manifest": "^2.0.24",
+		"gatsby-plugin-offline": "^2.0.25",
+		"gatsby-plugin-postcss": "^2.0.7",
+		"gatsby-plugin-react-helmet": "^3.0.10",
+		"gatsby-plugin-sass": "^2.0.11",
+		"gatsby-plugin-sharp": "^2.0.29",
+		"gatsby-source-filesystem": "^2.0.27",
+		"gatsby-transformer-sharp": "^2.1.17",
+		"node-sass": "^4.11.0",
+		"postcss-preset-env": "^6.5.0",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.4",
+		"react-dom": "^16.8.4",
+		"react-helmet": "^5.2.0"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.5.0",
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.12.1",
+		"eslint-config-prettier": "^3.6.0",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-plugin-import": "^2.15.0",
+		"eslint-plugin-node": "^8.0.1",
+		"eslint-plugin-prettier": "^3.0.1",
+		"eslint-plugin-promise": "^4.0.1",
+		"eslint-plugin-react": "^7.12.4",
+		"eslint-plugin-standard": "^4.0.0",
+		"postcss-loader": "^3.0.0",
+		"prettier": "^1.15.2",
+		"sass": "^1.16.1"
+	},
+	"keywords": [
+		"gatsby"
+	],
+	"license": "MIT",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"format": "prettier --write src/**/*.{js,jsx}",
+		"start": "npm run develop",
+		"serve": "gatsby serve",
+		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gatsbyjs/gatsby-starter-default"
+	},
+	"bugs": {
+		"url": "https://github.com/gatsbyjs/gatsby/issues"
+	}
+}
