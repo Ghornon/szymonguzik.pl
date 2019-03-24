@@ -1,0 +1,64 @@
+.navbar {
+	width: 100%;
+	text-align: center;
+	color: white;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+
+	&__heading {
+		font-size: 1rem;
+		display: none;
+	}
+
+	&__switch {
+		position: relative;
+		box-sizing: border-box;
+		margin: 0 auto;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		height: 34px;
+		line-height: 34px;
+	}
+
+	&__checkbox {
+		display: none;
+
+		&:checked+.navbar__slider::before {
+			transform: translateX(26px);
+			background: url('~@images/pl.jpg');
+			background-position: right;
+		}
+	}
+
+	&__slider {
+		width: 60px;
+		height: 34px;
+		margin: 0 8px;
+		cursor: pointer;
+		background: #2e303c;
+		transition: 400ms;
+		border-radius: 34px;
+		border: 2px solid #3d3e46;
+		border-radius: 34px;
+		position: relative;
+		box-sizing: border-box;
+		backface-visibility: hidden;
+
+		&::before {
+			position: absolute;
+			content: '';
+			height: 22px;
+			width: 22px;
+			left: 4px;
+			bottom: 4px;
+			background: url('~@images/en.jpg');
+			display: block;
+			background-size: 100%;
+			background-position: center;
+			transition: 400ms;
+			border-radius: 50%;
+			box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
+		}
+	}
+}

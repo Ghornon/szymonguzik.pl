@@ -1,0 +1,72 @@
+@import '@styles/abstarcts/_variables.scss';
+
+.banner {
+	width: 100%;
+	// min-height: 500px;
+	height: calc(100vh - 100px);
+	max-height: 600px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: $boxShadow;
+	background: $headingColor;
+
+	&__header {
+		position: absolute;
+		top: 50%;
+		left: 20vw;
+		transform: translate(-20%, -50%);
+		z-index: 20;
+	}
+
+	&__heading {
+		padding: 0;
+		margin: 0;
+		text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+		color: $white;
+
+		&--primary {
+			color: $white;
+			text-transform: none;
+		}
+
+		&--secondary {
+			text-transform: uppercase;
+			text-transform: none;
+			// color: $secondaryColor;
+			width: 100%;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		min-height: 500px;
+
+		// object-fit: cover;
+		// background-size: cover;
+		// background-position: center;
+		// background-attachment: fixed;
+
+		img {
+			// top: -30% !important;
+			object-position: bottom bottom !important;
+		}
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: radial-gradient(ellipse at center,
+			rgba(125, 126, 125, 1) 0%,
+			rgba(124, 125, 124, 0.6) 1%,
+			rgba(14, 14, 14, 0.8) 100%);
+		// background: black;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
+
+}

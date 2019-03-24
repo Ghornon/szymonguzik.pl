@@ -1,0 +1,37 @@
+body {
+	background: $ligthGray;
+}
+
+.typing {
+	display: inline-block;
+
+	&::after {
+		content: ' |';
+		animation: fade 1s linear infinite;
+	}
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+
+	@each $key,
+	$value in $breakpoints {
+		@media only screen and (min-width: map-get($breakpoints, $key)) {
+			width: map-get($container, $key);
+		}
+	}
+}
+
+.container-fluid {
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+
+	@each $key,
+	$value in $breakpoints {
+		@media only screen and (min-width: map-get($breakpoints, $key)) {
+			padding: 0 map-get($containerPadding, $key);
+		}
+	}
+}

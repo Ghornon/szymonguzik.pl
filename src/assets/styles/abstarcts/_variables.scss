@@ -1,0 +1,48 @@
+/* Background */
+
+$darkGary: #212429;
+$ligthGray: #f6f6f6;
+
+/* Colors */
+
+$white: #ffffff;
+$mint: #46ceac;
+
+/* Typography colors */
+
+$primaryColor: #464646;
+$secondaryColor: #999999;
+
+$headingColor: #363636;
+$headingBoldColor: #212121;
+
+/* Fonts */
+
+$primaryFont: 'Hind',
+sans-serif;
+$headingFont: 'Montserrat',
+sans-serif;
+
+/* Shadows */
+
+$boxShadow: 0px 6px 20px -1px rgba(0, 0, 0, 0.6);
+
+/* Breakpoints */
+
+$breakpoints: (xs: 576px,
+s: 576px,
+m: 768px,
+l: 992px,
+xl: 1200px);
+
+$container: (xs: 100%,
+s: 540px,
+m: 720px,
+l: 960px,
+xl: 100%);
+
+$containerPadding: (xs: 20px,
+s: 20px,
+m: 20px,
+l: 30px,
+xl: 40px);
