@@ -1,0 +1,21 @@
+@keyframes swing {
+	20% {
+		transform: rotate3d(0, 0, 1, 4deg);
+	}
+
+	40% {
+		transform: rotate3d(0, 0, 1, -2deg);
+	}
+
+	60% {
+		transform: rotate3d(0, 0, 1, 1deg);
+	}
+
+	80% {
+		transform: rotate3d(0, 0, 1, -1deg);
+	}
+
+	to {
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+}

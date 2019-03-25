@@ -21,10 +21,23 @@ const articlePhotoQuery = graphql`
 
 const articles = [
 	{
+		articleType: 'textbox',
 		primaryHeader: 'Who am I?',
 		secondaryHeader: 'Personal',
-		content:
-			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim cum deleniti a recusandae cupiditate, laboriosam iure ipsa tenetur consequuntur deserunt sint ullam, itaque reiciendis veniam voluptatibus harum facere doloremque? Eius unde similique maiores voluptatibus molestiae nihil architecto quisquam voluptatum accusamus dignissimos quos voluptates, quibusdam, error qui quam ipsum tempora fuga?',
+		content: (
+			<>
+				I'm an amateur front-end developer.
+				<br />
+				<br />
+				I graduate from a high school for an IT technician. I'm looking for my first job as
+				the front-end and/or JavaScript developer.
+				<br />
+				<br />
+				Programming is my passion since I graduated from primary school. Then I started
+				developing my skills, which made me love new technologies, library’s, frameworks and
+				especially JavaScript.
+			</>
+		),
 		icon: <FaUserSecret />,
 		footer: (
 			<Link to="#contact" className="about__button">
@@ -33,10 +46,19 @@ const articles = [
 		)
 	},
 	{
+		articleType: 'textbox',
 		primaryHeader: 'What do I do?',
 		secondaryHeader: 'Work',
-		content:
-			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim cum deleniti a recusandae cupiditate, laboriosam iure ipsa tenetur consequuntur deserunt sint ullam, itaque reiciendis veniam voluptatibus harum facere doloremque? Eius unde similique maiores voluptatibus molestiae nihil architecto quisquam voluptatum accusamus dignissimos quos voluptates, quibusdam, error qui quam ipsum tempora fuga?',
+		content: (
+			<>
+				I deal with designing and creating front-end part of website. As I said I’m an
+				amateur and I have no commercial experience in such work but, I made a few projects.
+				<br />
+				<br />I make a project step by step, from sketch to a fully functional website or
+				web application. I use the latest technologies so as to my websites look good on any
+				devices and always meet high standards.
+			</>
+		),
 		icon: <FaBriefcase />,
 		footer: (
 			<Link to="#portfolio" className="about__button">
@@ -56,8 +78,8 @@ const articles = [
 		icon: <FaImage />,
 		footer: (
 			<>
-				<h6 className="about__heading about__heading--secondary">Image</h6>
-				<h4 className="about__heading about__heading--primary">It's me :)</h4>
+				<h6 className="about__heading about__heading--secondary">It's me :)</h6>
+				<h4 className="about__heading about__heading--primary">Szymon Guzik</h4>
 			</>
 		)
 	}
@@ -71,19 +93,20 @@ const About = () => {
 			query={articlePhotoQuery}
 			render={data => (
 				<section className="about">
-					<div className="container-fluid about__grid">
+					<div className="container about__grid">
 						<Article {...articles[0]} />
-						<Article {...articles[1]} />
 						<Article {...articles[2]} />
 						<Article
 							{...articles[3]}
 							content={
 								<Img
 									fluid={data.bannerImage.childImageSharp.fluid}
-									className="banner__image"
+									className="about__image"
+									alt="Photo of me"
 								/>
 							}
 						/>
+						<Article {...articles[1]} />
 					</div>
 				</section>
 			)}

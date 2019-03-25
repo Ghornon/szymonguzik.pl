@@ -1,19 +1,28 @@
+@import '@styles/abstarcts/_variables.scss';
+
 .navbar {
 	width: 100%;
 	text-align: center;
 	color: white;
-	padding-bottom: 20px;
+	padding: 0 20px 20px 10px;
 	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
 
 	&__heading {
 		font-size: 1rem;
 		display: none;
+		color: $white;
+	}
+
+	&__logo {
+		color: $white;
+		width: 34px;
 	}
 
 	&__switch {
 		position: relative;
 		box-sizing: border-box;
-		margin: 0 auto;
 		color: #fff;
 		display: flex;
 		justify-content: center;
