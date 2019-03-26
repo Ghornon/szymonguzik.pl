@@ -6,6 +6,7 @@ import '@styles/main.scss';
 
 import { LandingPage } from './LandingPage';
 import { About } from './About';
+import { Portfolio } from './Portfolio';
 
 const siteMetadataQuery = graphql`
 	query SiteTitleQuery {
@@ -26,6 +27,7 @@ const Layout = ({ children }) => (
 				<>
 					<LandingPage title={title} />
 					<About />
+					<Portfolio />
 					{children}
 				</>
 			);
