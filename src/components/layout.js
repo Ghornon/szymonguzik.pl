@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
 import '@styles/main.scss';
-
-import { LandingPage } from './LandingPage';
-import { About } from './About';
-import { Portfolio } from './Portfolio';
+import { Footer } from './index';
 
 const siteMetadataQuery = graphql`
 	query SiteTitleQuery {
@@ -25,10 +22,8 @@ const Layout = ({ children }) => (
 			const title = data.site.siteMetadata.title;
 			return (
 				<>
-					<LandingPage title={title} />
-					<About />
-					<Portfolio />
 					{children}
+					<Footer title={title} />
 				</>
 			);
 		}}

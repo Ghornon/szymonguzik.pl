@@ -14,16 +14,8 @@ import {
 
 import './Portfolio.scss';
 
-import { Item } from './index';
+import { PortfolioItem } from './index';
 
-/* 
-img:
-icon:
-name:
-description:
-linkTo:
-
-*/
 const portfolioImagesQuery = graphql`
 	query {
 		portfolioImages: allFile(
@@ -51,32 +43,38 @@ const Portfolio = () => (
 				{
 					icon: <FaShoppingCart />,
 					image: 'portfolio_ecommerce.jpg',
-					name: 'Ecommerce app'
+					name: 'Ecommerce app',
+					description: 'React app'
 				},
 				{
 					icon: <FaDrumstickBite />,
 					image: 'portfolio_nowajaga.jpg',
-					name: 'Nowajaga.pl'
+					name: 'Nowajaga.pl',
+					description: 'Gatsby app'
 				},
 				{
 					icon: <FaImage />,
 					image: 'portfolio_szplotka.jpg',
-					name: 'Szplotka.pl'
+					name: 'Szplotka.pl',
+					description: 'Static website'
 				},
 				{
 					icon: <FaCamera />,
 					image: 'portfolio_buttonstudio.jpg',
-					name: 'Button Studio'
+					name: 'Button Studio',
+					description: 'Static website'
 				},
 				{
 					icon: <FaPaintBrush />,
 					image: 'portfolio_loremipsum.jpg',
-					name: 'Lorem ipsum'
+					name: 'Lorem ipsum',
+					description: 'Static website'
 				},
 				{
 					icon: <FaThumbtack />,
 					image: 'portfolio_zwyrtany.jpg',
-					name: 'Zwyrtany'
+					name: 'Zwyrtany',
+					description: 'Static website'
 				}
 			].map((element, index) => {
 				const img = data.portfolioImages.edges.find(
@@ -84,7 +82,7 @@ const Portfolio = () => (
 				);
 
 				return (
-					<Item
+					<PortfolioItem
 						key={`portfolio-item-${index}`}
 						icon={element.icon}
 						image={
@@ -95,6 +93,7 @@ const Portfolio = () => (
 							/>
 						}
 						name={element.name}
+						description={element.description}
 					/>
 				);
 			});
@@ -110,25 +109,25 @@ const Portfolio = () => (
 								<h6 className="portfolio__heading portfolio__heading--secondary">
 									Portfolio
 								</h6>
-								<h4 className="portfolio__heading portfolio__heading--primary">
+								<h4 className="portfolio__heading portfolio__heading--primary portfolio__heading--uppercase">
 									My projects
 								</h4>
 							</header>
 
 							<footer className="portfolio__footer">
-								<h6 className="portfolio__heading portfolio__heading--secondary">
+								<p className="portfolio__paragraph">
 									A few selected projects created by me.
-								</h6>
-								<h6 className="portfolio__heading portfolio__heading--secondary">
+								</p>
+								<p className="portfolio__paragraph">
 									See also my{' '}
-									<Link
-										to="https://github.com/Ghornon"
-										className="portfolio__link"
+									<a
+										href="https://github.com/Ghornon"
+										className="portfolio__link portfolio__link--flex"
 									>
 										github <FaGithub className="portfolio__link-icon" />
-									</Link>{' '}
+									</a>{' '}
 									repositories.
-								</h6>
+								</p>
 							</footer>
 						</div>
 

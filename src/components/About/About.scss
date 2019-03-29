@@ -37,6 +37,7 @@
 			color: $secondaryColor;
 			font-weight: normal;
 			padding-bottom: 5px;
+			font-size: 0.75rem;
 		}
 	}
 
@@ -47,7 +48,7 @@
 		transform: translate(-50%, -50%);
 		width: 30px;
 		height: 30px;
-		background: $darkGary;
+		background: $darkGray;
 		color: $white;
 		display: flex;
 		flex-direction: column;
@@ -100,7 +101,7 @@
 		}
 
 		&--quote {
-			background: $darkGary;
+			background: $darkGray;
 			color: $white;
 			padding-bottom: 30px;
 
@@ -122,7 +123,7 @@
 			}
 
 			.about__icon {
-				color: $darkGary;
+				color: $darkGray;
 				background: $white;
 			}
 		}

@@ -6,12 +6,8 @@
 	&__grid {
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 			grid-gap: 30px;
-		}
-
-		@media only screen and (min-width: map-get($breakpoints, 'x')) {
-			grid-template-columns: repeat(3, 1fr);
 		}
 
 		@media only screen and (min-width: map-get($breakpoints, 'xl')) {
@@ -82,39 +78,67 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background: $darkGary;
+		background: $darkGray;
 		color: $white;
 	}
 
 	&__footer {
 		padding: 30px 20px 20px 20px;
+		text-align: center;
 	}
 
 	&__heading {
-		text-align: center;
+
+		&--primary {
+			margin-top: 0;
+		}
+
+		&--uppercase {
+			text-transform: uppercase;
+		}
 
 		&--secondary {
+			text-transform: uppercase;
 			color: $secondaryColor;
-			font-weight: lighter;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			font-weight: normal;
+			padding-bottom: 5px;
+			font-size: 0.75rem;
+			margin-bottom: 0;
 		}
+	}
+
+	&__paragraph {
+		display: flex;
 	}
 
 	&__link {
 		color: $headingBoldColor;
-		font-weight: bold;
 		cursor: pointer;
 		transition-duration: 250ms;
-		display: flex;
-		margin: 0 5px;
+		text-decoration: none;
+		position: relative;
+
+		&::after {
+			content: '';
+			width: 40px;
+			height: 2px;
+			background: $darkGray;
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			opacity: 0;
+			transform: translateX(-50%);
+			transition-duration: 250ms;
+		}
 
 		&--flex {
-			color: $secondaryColor;
-			text-decoration: none;
-			font-weight: normal;
-			margin: 0 15px;
+			display: flex;
+			margin: 0 5px;
+			font-weight: bold;
+
+			&::after {
+				display: none;
+			}
 		}
 
 		&-icon {
@@ -122,7 +146,11 @@
 		}
 
 		&:hover {
-			color: $primaryColor;
+			// color: $primaryColor;
+
+			&::after {
+				opacity: 1;
+			}
 		}
 	}
 }

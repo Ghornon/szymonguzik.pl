@@ -1,0 +1,60 @@
+@import '@styles/abstarcts/_variables.scss';
+@import '@styles/abstarcts/_mixins.scss';
+
+.brand {
+	box-sizing: border-box;
+	padding-top: 60px;
+
+	&__grid {
+		padding: 0 20px;
+
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 30px;
+			padding: 0;
+		}
+	}
+
+	&__item {
+		border: 3px solid $darkGray;
+		padding: 20px;
+		margin-top: 40px;
+		text-align: center;
+		position: relative;
+		width: 100%;
+		min-height: 260px;
+		box-sizing: border-box;
+	}
+
+	&__icon {
+		padding-top: 30px;
+		$size: 2rem;
+		width: $size;
+		height: $size;
+		margin: 0 auto;
+		color: $primaryColor;
+		animation-name: pulse;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+
+		svg {
+			width: $size;
+			height: $size;
+		}
+	}
+
+	&__header {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		background: $lightGray;
+		margin: 0;
+		padding: 0 20px;
+	}
+
+	&__paragraph {
+		padding: 20px;
+	}
+}

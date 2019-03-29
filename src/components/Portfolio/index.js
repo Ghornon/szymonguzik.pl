@@ -1,2 +1,2 @@
 export { default as Portfolio } from './Portfolio';
-export { default as Item } from './Item/Item';
+export { default as PortfolioItem } from './PortfolioItem';

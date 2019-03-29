@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Article = props => {
+const AboutArticle = props => {
 	const { articleType, icon, primaryHeader, secondaryHeader, content, footer } = props;
 	console.log(primaryHeader);
 	return (
@@ -22,4 +22,4 @@ const Article = props => {
 	);
 };
 
-export default Article;
+export default AboutArticle;

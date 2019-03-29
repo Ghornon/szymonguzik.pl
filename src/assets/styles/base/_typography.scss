@@ -1,7 +1,7 @@
 html,
 body {
 	font-size: 16px;
-	@include interpolate(font-size, 320px, 1600px, 14px, 16px);
+	@include interpolate(font-size, 320px, 1200px, 14px, 16px);
 	font-weight: lighter;
 	color: $primaryColor;
 	font-family: $primaryFont;
@@ -13,6 +13,7 @@ h1 {
 	font-size: 2.5rem;
 	font-weight: bold;
 	color: $headingBoldColor;
+	font-family: $headingFont;
 }
 
 /* Heading h2-h6 */

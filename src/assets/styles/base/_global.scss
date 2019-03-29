@@ -1,5 +1,5 @@
 body {
-	background: $ligthGray;
+	background: $lightGray;
 }
 
 .typing {
@@ -20,6 +20,7 @@ body {
 	$value in $breakpoints {
 		@media only screen and (min-width: map-get($breakpoints, $key)) {
 			width: map-get($container, $key);
+			padding: 0;
 		}
 	}
 }
@@ -35,4 +36,8 @@ body {
 			padding: 0 map-get($containerPadding, $key);
 		}
 	}
+}
+
+section {
+	z-index: 10;
 }

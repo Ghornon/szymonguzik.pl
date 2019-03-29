@@ -19,3 +19,17 @@
 		transform: rotate3d(0, 0, 1, 0deg);
 	}
 }
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 1.15, 1.15);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
