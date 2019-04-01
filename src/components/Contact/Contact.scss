@@ -9,8 +9,8 @@
 	background-position: center top;
 	background-attachment: fixed;
 	position: relative;
-	margin-top: 100px;
 	z-index: 0;
+
 
 	@media only screen and (min-width: map-get($breakpoints, 'm')) {
 		max-height: 800px;
@@ -49,10 +49,9 @@
 	}
 
 	&__item {
-		margin: 30px;
+		// margin: 30px;
 		text-align: center;
 		z-index: 30;
-
 
 		&:last-child {
 			@media only screen and (min-width: map-get($breakpoints, 'm')) and (max-width: map-get($breakpoints, 'l')) {

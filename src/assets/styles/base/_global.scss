@@ -13,7 +13,7 @@ body {
 
 .container {
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 80px auto;
 	box-sizing: border-box;
 
 	@each $key,
@@ -23,18 +23,27 @@ body {
 			padding: 0;
 		}
 	}
+
+	&--no-margin {
+		margin: 0 auto;
+	}
 }
 
 .container-fluid {
 	width: 100%;
 	padding: 20px;
 	box-sizing: border-box;
+	margin: 0 auto 80px auto;
 
 	@each $key,
 	$value in $breakpoints {
 		@media only screen and (min-width: map-get($breakpoints, $key)) {
 			padding: 0 map-get($containerPadding, $key);
 		}
+	}
+
+	&--no-margin {
+		margin: 0;
 	}
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import { LandingPage, About, Portfolio, Brand, Contact, Layout, SEO } from '../components';
 

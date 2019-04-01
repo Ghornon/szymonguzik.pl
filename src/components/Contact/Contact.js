@@ -31,7 +31,7 @@ const Contact = () => {
 
 	return (
 		<section className="contact">
-			<div className="container contact__grid">{contactList}</div>
+			<div className="container container--no-margin contact__grid ">{contactList}</div>
 		</section>
 	);
 };

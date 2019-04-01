@@ -3,7 +3,7 @@
 
 .brand {
 	box-sizing: border-box;
-	padding-top: 60px;
+	// padding-top: 60px;
 
 	&__grid {
 		padding: 0 20px;
@@ -19,7 +19,6 @@
 	&__item {
 		border: 3px solid $darkGray;
 		padding: 20px;
-		margin-top: 40px;
 		text-align: center;
 		position: relative;
 		width: 100%;
