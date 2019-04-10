@@ -2,7 +2,6 @@ import React from 'react';
 
 const AboutArticle = props => {
 	const { articleType, icon, primaryHeader, secondaryHeader, content, footer } = props;
-	console.log(primaryHeader);
 	return (
 		<div
 			className={

@@ -16,23 +16,42 @@ const logoQuery = graphql`
 	}
 `;
 
-const Navbar = ({ title }) => (
+const Navbar = ({ title, locale }) => (
 	<StaticQuery
 		query={logoQuery}
-		render={data => (
-			<header className="navbar">
-				<h1 className="navbar__heading">{`<${title} />`}</h1>
-				<Link className="navbar__logo" to="/">
-					<Img fluid={data.logoImage.childImageSharp.fluid} alt="Logo" />
-				</Link>
-				<div className="navbar__switch">
-					<input type="checkbox" name="lang" id="lang" className="navbar__checkbox" />
-					EN
-					<label className="navbar__slider" htmlFor="lang" />
-					PL
-				</div>
-			</header>
-		)}
+		render={data => {
+			console.log(locale);
+			return (
+				<header className="navbar">
+					<h1 className="navbar__heading">{`<${title} />`}</h1>
+					<Link className="navbar__logo" to="/">
+						<Img fluid={data.logoImage.childImageSharp.fluid} alt="Logo" />
+					</Link>
+					{/* <div className="navbar__switch">
+						<input type="checkbox" name="lang" id="lang" className="navbar__checkbox" />
+						EN
+						<label className="navbar__slider" htmlFor="lang" />
+						PL
+					</div> */}
+					<div className="navbar__locales">
+						<Link
+							to="/"
+							className="navbar__link"
+							activeClassName="navbar__link--active"
+						>
+							EN
+						</Link>
+						<Link
+							to="/pl"
+							className="navbar__link"
+							activeClassName="navbar__link--active"
+						>
+							PL
+						</Link>
+					</div>
+				</header>
+			);
+		}}
 	/>
 );
 

@@ -70,4 +70,19 @@
 			box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
 		}
 	}
+
+	&__locales {
+		display: flex;
+		line-height: 34px;
+	}
+
+	&__link {
+		color: white;
+		text-decoration: none;
+		margin: 0 5px;
+
+		&--active {
+			text-decoration: underline;
+		}
+	}
 }

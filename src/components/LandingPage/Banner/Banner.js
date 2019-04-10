@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { FormattedMessage } from 'react-intl';
 
 import './Banner.scss';
 
@@ -28,9 +29,12 @@ const Banner = () => {
 						alt="Banner image"
 					/>
 					<header className="banner__header">
-						<h1 className="banner__heading banner__heading--primary">I'm Simon</h1>
+						<h1 className="banner__heading banner__heading--primary">
+							<FormattedMessage id="banner.header" />
+						</h1>
 						<h2 className="banner__heading banner__heading--secondary">
-							I’m looking for <span className="typing">internship</span>
+							<FormattedMessage id="banner.subHeader" />
+							{/* <span className="typing">internship</span> */}
 						</h2>
 					</header>
 				</div>

@@ -1,4 +1,10 @@
 const path = require('path');
+const dotenv = require('dotenv');
+
+if (process.env.NODE_ENV !== 'production') {
+	dotenv.config();
+}
+
 module.exports = {
 	siteMetadata: {
 		title: `szymonguzik.pl`,
@@ -46,6 +52,15 @@ module.exports = {
 				},
 				extensions: []
 			}
-		}
+		},
+		{
+			resolve: `gatsby-source-contentful`,
+			options: {
+				spaceId: `42pm29yjtfwf`,
+				// Learn about environment variables: https://gatsby.dev/env-vars
+				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+			}
+		},
+		`@contentful/gatsby-transformer-contentful-richtext`
 	]
 };

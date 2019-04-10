@@ -41,6 +41,11 @@
 		}
 	}
 
+	&__content p {
+		margin: 0;
+		padding: 0;
+	}
+
 	&__icon {
 		position: absolute;
 		top: 0;
