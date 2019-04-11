@@ -1,7 +1,14 @@
 {
+	"IndexPage": "Home",
+	"404Page": "404: Not found",
 	"banner.header": "I'm Simon",
 	"banner.subHeader": "I'm looking for an internship",
 	"about.quote": "Creativity is intelligence having fun.",
 	"about.footer": "Albert Einstein",
-	"about.image-text": "It's me :)"
+	"about.image-text": "It's me :)",
+	"portfolio:heading-secondary": "Portfolio",
+	"portfolio:heading-primary": "My projects",
+	"portfolio:description-firstline": "A few selected projects created by me.",
+	"portfolio:description-secoundline": "See also my",
+	"portfolio:description-thirdline": "repositories."
 }

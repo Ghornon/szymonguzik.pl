@@ -4,12 +4,11 @@ import Img from 'gatsby-image';
 import { FaUserSecret, FaBriefcase, FaQuoteRight, FaImage } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
 
-const getArticles = (data, locale) => {
-	const localePosts = data.About.edges
-		.filter(element => element.node.node_locale === locale)
-		.map(element => {
-			return { ...element.node };
-		});
+const getArticles = ({ data, image }) => {
+	console.log(data);
+	if (!Array.isArray(data)) {
+		return;
+	}
 
 	const articles = [
 		{
@@ -26,7 +25,7 @@ const getArticles = (data, locale) => {
 			articleType: 'image',
 			content: (
 				<Img
-					fluid={data.bannerImage.childImageSharp.fluid}
+					fluid={image.childImageSharp.fluid}
 					className="about__image"
 					alt="Photo of me"
 				/>
@@ -45,7 +44,7 @@ const getArticles = (data, locale) => {
 
 	const icons = [<FaUserSecret />, <FaBriefcase />];
 
-	localePosts.forEach((element, index) => {
+	data.forEach((element, index) => {
 		const newArticle = {
 			articleType: 'textbox',
 			primaryHeader: element.title,
