@@ -30,10 +30,10 @@ const Banner = () => {
 					/>
 					<header className="banner__header">
 						<h1 className="banner__heading banner__heading--primary">
-							<FormattedMessage id="banner.header" />
+							<FormattedMessage id="Banner.header" />
 						</h1>
 						<h2 className="banner__heading banner__heading--secondary">
-							<FormattedMessage id="banner.subHeader" />
+							<FormattedMessage id="Banner.subHeader" />
 							{/* <span className="typing">internship</span> */}
 						</h2>
 					</header>

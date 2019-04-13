@@ -3,11 +3,11 @@ import './LandingPage.scss';
 
 import { Banner, Navbar } from './index';
 
-const LandingPage = ({ title, locale }) => {
+const LandingPage = ({ title }) => {
 	return (
 		<section className="landing-page">
 			<div className="container-fluid">
-				<Navbar title={title} locale={locale} />
+				<Navbar title={title} />
 				<Banner />
 			</div>
 		</section>

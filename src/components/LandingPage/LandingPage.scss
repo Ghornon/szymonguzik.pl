@@ -2,7 +2,10 @@
 
 .landing-page {
 	width: 100%;
-	padding-top: 20px;
 	background: linear-gradient($darkGray 50%, $lightGray 50%);
 	box-sizing: border-box;
+
+	@media only screen and (min-width: map-get($breakpoints, 'm')) {
+		// padding: 0 30px;
+	}
 }

@@ -9,10 +9,15 @@ import plData from 'react-intl/locale-data/pl';
 // Messages
 import en from '../locales/en.json';
 import pl from '../locales/pl.json';
+const flatten = require('flat');
 
 const Context = React.createContext();
 
-const messages = { en, pl };
+const messages = {
+	en: flatten(en),
+	pl: flatten(pl)
+};
+
 addLocaleData([...enData, ...plData]);
 
 class StoreProvider extends Component {
@@ -30,8 +35,6 @@ class StoreProvider extends Component {
 					});
 			}
 		});
-
-		console.log(localeData);
 
 		return localeData;
 	}

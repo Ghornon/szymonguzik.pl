@@ -26,53 +26,49 @@ const PortfolioUI = ({ Portfolio }) => {
 		<FaImage />,
 		<FaShoppingCart />
 	];
-	const itemsList = Portfolio.map((element, index) => {
+
+	const itemsList = Portfolio.map(({ image, name, description, link, iconName }, index) => {
 		return (
 			<PortfolioItem
 				key={`portfolio-item-${index}`}
-				icon={icons[index]}
-				image={
-					<Img
-						fluid={element.image.fluid}
-						className=""
-						alt={`Image of ${element.name} project`}
-					/>
-				}
-				name={element.name}
-				description={element.description}
+				icon={icons.find(({ type: { displayName } }) => displayName === iconName)}
+				image={<Img fluid={image.fluid} className="" alt={`Image of ${name} project`} />}
+				name={name}
+				description={description}
+				link={link}
 			/>
 		);
 	});
 
 	return (
-		<section className="Portfolio">
-			<div className="container-fluid portfolio__grid">
+		<section className="portfolio">
+			<div className="container portfolio__grid">
 				<div className="portfolio__item portfolio__item--large">
 					<header className="portfolio__header">
 						<div className="portfolio__icon">
 							<FaPen />
 						</div>
 						<h6 className="portfolio__heading portfolio__heading--secondary">
-							<FormattedMessage id="portfolio:heading-secondary" />
+							<FormattedMessage id="Portfolio.header.heading-secondary" />
 						</h6>
 						<h4 className="portfolio__heading portfolio__heading--primary portfolio__heading--uppercase">
-							<FormattedMessage id="portfolio:heading-primary" />
+							<FormattedMessage id="Portfolio.header.heading-primary" />
 						</h4>
 					</header>
 
 					<footer className="portfolio__footer">
 						<p className="portfolio__paragraph">
-							<FormattedMessage id="portfolio:description-firstline" />
+							<FormattedMessage id="Portfolio.footer.firstline" />
 						</p>
 						<p className="portfolio__paragraph">
-							<FormattedMessage id="portfolio:description-secoundline" />
+							<FormattedMessage id="Portfolio.footer.secoundline" />
 							<a
 								href="https://github.com/Ghornon"
 								className="portfolio__link portfolio__link--flex"
 							>
 								github <FaGithub className="portfolio__link-icon" />
 							</a>
-							<FormattedMessage id="portfolio:description-thirdline" />
+							<FormattedMessage id="Portfolio.footer.thirdline" />
 						</p>
 					</footer>
 				</div>

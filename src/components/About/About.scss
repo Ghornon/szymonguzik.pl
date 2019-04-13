@@ -2,6 +2,11 @@
 @import '@styles/abstarcts/_mixins.scss';
 
 .about {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	&__grid {
 		padding: 0 20px;
 		box-sizing: border-box;
@@ -39,11 +44,6 @@
 			padding-bottom: 5px;
 			font-size: 0.75rem;
 		}
-	}
-
-	&__content p {
-		margin: 0;
-		padding: 0;
 	}
 
 	&__icon {
@@ -90,9 +90,13 @@
 		margin: 30px 0;
 		padding: 20px;
 
+		align-self: center;
+
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			margin: 0;
 		}
+
+		@media only screen and (min-width: map-get($breakpoints, 'l')) {}
 
 		@include OnHoverShadow;
 

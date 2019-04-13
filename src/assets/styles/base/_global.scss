@@ -25,15 +25,14 @@ body {
 	}
 
 	&--no-margin {
-		margin: 0 auto;
+		margin-bottom: 0;
 	}
 }
 
 .container-fluid {
 	width: 100%;
-	padding: 20px;
+	padding: 0 20px;
 	box-sizing: border-box;
-	margin: 0 auto 80px auto;
 
 	@each $key,
 	$value in $breakpoints {

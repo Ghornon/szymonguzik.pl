@@ -20,7 +20,7 @@ export default IndexPage;
 
 export const indexQuery = graphql`
 	query {
-		About: allContentfulAbout {
+		About: allContentfulAbout(sort: { fields: createdAt }) {
 			edges {
 				node {
 					id
@@ -37,7 +37,7 @@ export const indexQuery = graphql`
 				}
 			}
 		}
-		Portfolio: allContentfulPortfolio {
+		Portfolio: allContentfulPortfolio(sort: { fields: createdAt }) {
 			edges {
 				node {
 					id
@@ -48,6 +48,8 @@ export const indexQuery = graphql`
 							...GatsbyContentfulFluid
 						}
 					}
+					iconName
+					link
 					node_locale
 				}
 			}
@@ -66,7 +68,7 @@ export const indexQuery = graphql`
 				}
 			}
 		}
-		Contact: allContentfulContact {
+		Contact: allContentfulContact(sort: { fields: createdAt }) {
 			edges {
 				node {
 					id

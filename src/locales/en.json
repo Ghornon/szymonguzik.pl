@@ -1,14 +1,35 @@
 {
-	"IndexPage": "Home",
-	"404Page": "404: Not found",
-	"banner.header": "I'm Simon",
-	"banner.subHeader": "I'm looking for an internship",
-	"about.quote": "Creativity is intelligence having fun.",
-	"about.footer": "Albert Einstein",
-	"about.image-text": "It's me :)",
-	"portfolio:heading-secondary": "Portfolio",
-	"portfolio:heading-primary": "My projects",
-	"portfolio:description-firstline": "A few selected projects created by me.",
-	"portfolio:description-secoundline": "See also my",
-	"portfolio:description-thirdline": "repositories."
+	"SEO": {
+		"IndexPage": {
+			"title": "Home"
+		},
+		"404Page": {
+			"title": "404: Not found"
+		}
+	},
+	"Banner": {
+		"header": "I'm Simon",
+		"subHeader": "I'm looking for an internship"
+	},
+	"About": {
+		"quote": {
+			"content": "Creativity is intelligence having fun.",
+			"footer": "Albert Einstein"
+		},
+		"image": {
+			"footer": "It's me :)"
+		}
+	},
+	"Portfolio": {
+		"header": {
+			"heading-primary": "My projects",
+			"heading-secondary": "Portfolio"
+		},
+		"footer": {
+			"firstline": "A few selected projects created by me.",
+			"secoundline": "See also my",
+			"thirdline": "repositories."
+		}
+	},
+	"Footer": "All rights reserved!"
 }

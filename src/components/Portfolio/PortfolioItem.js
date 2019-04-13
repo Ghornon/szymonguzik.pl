@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PortfolioItem = ({ icon, image, name, description, linktTo = '#' }) => {
+const PortfolioItem = ({ icon, image, name, description, link = '#' }) => {
 	return (
 		<div className="portfolio__item">
 			<header className="portfolio__header">
@@ -11,7 +11,7 @@ const PortfolioItem = ({ icon, image, name, description, linktTo = '#' }) => {
 			<footer className="portfolio__footer">
 				<h6 className="portfolio__heading portfolio__heading--secondary">{description}</h6>
 				<h4 className="portfolio__heading portfolio__heading--primary">
-					<a href={linktTo} className="portfolio__link">
+					<a href={link} className="portfolio__link">
 						{name}
 					</a>
 				</h4>

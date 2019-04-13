@@ -5,7 +5,6 @@ import { FaUserSecret, FaBriefcase, FaQuoteRight, FaImage } from 'react-icons/fa
 import { FormattedMessage } from 'react-intl';
 
 const getArticles = ({ data, image }) => {
-	console.log(data);
 	if (!Array.isArray(data)) {
 		return;
 	}
@@ -13,11 +12,11 @@ const getArticles = ({ data, image }) => {
 	const articles = [
 		{
 			articleType: 'quote',
-			content: <FormattedMessage id="about.quote" />,
+			content: <FormattedMessage id="About.quote.content" />,
 			icon: <FaQuoteRight />,
 			footer: (
 				<h6 className="about__heading about__heading--secondary">
-					<FormattedMessage id="about.footer" />
+					<FormattedMessage id="About.quote.footer" />
 				</h6>
 			)
 		},
@@ -34,7 +33,7 @@ const getArticles = ({ data, image }) => {
 			footer: (
 				<>
 					<h6 className="about__heading about__heading--secondary">
-						<FormattedMessage id="about.image-text" />
+						<FormattedMessage id="About.image.footer" />
 					</h6>
 					<h4 className="about__heading about__heading--primary">Szymon Guzik</h4>
 				</>
@@ -58,7 +57,7 @@ const getArticles = ({ data, image }) => {
 			),
 			icon: icons[index],
 			footer: (
-				<a to={element.buttonTarget} className="about__button">
+				<a href={element.buttonTarget} className="about__button">
 					{element.buttonLabel}
 				</a>
 			)

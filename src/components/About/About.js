@@ -22,7 +22,6 @@ const AboutUI = props => (
 	<StaticQuery
 		query={aboutQuery}
 		render={dataImage => {
-			console.log('About', props);
 			const articlesList = getArticles({ data: props.About, ...dataImage });
 			return (
 				<section className="about">

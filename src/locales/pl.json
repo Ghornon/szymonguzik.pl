@@ -1,14 +1,35 @@
 {
-	"IndexPage": "Strona główna",
-	"404Page": "404: Nie znaleziono",
-	"banner.header": "Jestem Szymon",
-	"banner.subHeader": "Szukam stażu",
-	"about.quote": "Kreatywność jest zabawą inteligencji.",
-	"about.footer": "Albert Einstein",
-	"about.image-text": "To ja :)",
-	"portfolio:heading-secondary": "Portfolio",
-	"portfolio:heading-primary": "Moje projekty",
-	"portfolio:description-firstline": "Kilka projektów stworzonych przeze mnie.",
-	"portfolio:description-secoundline": "Zobacz również moje repozytoria na",
-	"portfolio:description-thirdline": " "
+	"SEO": {
+		"IndexPage": {
+			"title": "Strona główna"
+		},
+		"404Page": {
+			"title": "404: Nie znaleziono"
+		}
+	},
+	"Banner": {
+		"header": "Jestem Szymon",
+		"subHeader": "Szukam stażu"
+	},
+	"About": {
+		"quote": {
+			"content": "Kreatywność jest zabawą inteligencji.",
+			"footer": "Albert Einstein"
+		},
+		"image": {
+			"footer": "To ja :)"
+		}
+	},
+	"Portfolio": {
+		"header": {
+			"heading-primary": "Moje projekty",
+			"heading-secondary": "Portfolio"
+		},
+		"footer": {
+			"firstline": "Kilka projektów stworzonych przeze mnie.",
+			"secoundline": "Zobacz również moje repozytoria na",
+			"thirdline": " "
+		}
+	},
+	"Footer": "Wszelkie prawa zastrzeżone!"
 }
