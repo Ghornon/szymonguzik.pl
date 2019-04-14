@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'gatsby';
+
 import './Footer.scss';
 
 const Footer = ({ title }) => {

@@ -1,8 +1,9 @@
 import React from 'react';
-import { AboutArticle } from './index';
 import Img from 'gatsby-image';
 import { FaUserSecret, FaBriefcase, FaQuoteRight, FaImage } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
+
+import { AboutArticle } from './index';
 
 const getArticles = ({ data, image }) => {
 	if (!Array.isArray(data)) {

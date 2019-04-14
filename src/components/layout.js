@@ -23,12 +23,6 @@ const Layout = ({ locale, children, queryData }) => (
 		render={layoutData => {
 			const title = layoutData.site.siteMetadata.title;
 
-			/* const childrenWithProps = React.Children.map(children, child => {
-				return React.cloneElement(child, {
-					locale
-				});
-			}); */
-
 			return (
 				<StoreProvider locale={locale} queryData={queryData}>
 					<>

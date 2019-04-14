@@ -4,7 +4,7 @@ import { Notfound, Layout, SEO } from '../components';
 
 const NotFoundPage = ({ pageContext: { locale } }) => (
 	<Layout locale={locale}>
-		<SEO title="404: Not found" />
+		<SEO title={locale === 'en' ? '404: Not found' : '404: Nie znaleziono'} lang={locale} />
 		<Notfound />
 	</Layout>
 );

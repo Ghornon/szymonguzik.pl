@@ -17,30 +17,27 @@ const bannerImageQuery = graphql`
 	}
 `;
 
-const Banner = () => {
-	return (
-		<StaticQuery
-			query={bannerImageQuery}
-			render={data => (
-				<div className="banner">
-					<Img
-						fluid={data.bannerImage.childImageSharp.fluid}
-						className="banner__image"
-						alt="Banner image"
-					/>
-					<header className="banner__header">
-						<h1 className="banner__heading banner__heading--primary">
-							<FormattedMessage id="Banner.header" />
-						</h1>
-						<h2 className="banner__heading banner__heading--secondary">
-							<FormattedMessage id="Banner.subHeader" />
-							{/* <span className="typing">internship</span> */}
-						</h2>
-					</header>
-				</div>
-			)}
-		/>
-	);
-};
+const Banner = () => (
+	<StaticQuery
+		query={bannerImageQuery}
+		render={data => (
+			<div className="banner">
+				<Img
+					fluid={data.bannerImage.childImageSharp.fluid}
+					className="banner__image"
+					alt="Banner image"
+				/>
+				<header className="banner__header">
+					<h1 className="banner__heading banner__heading--primary">
+						<FormattedMessage id="Banner.header" />
+					</h1>
+					<h2 className="banner__heading banner__heading--secondary">
+						<FormattedMessage id="Banner.subHeader" />
+					</h2>
+				</header>
+			</div>
+		)}
+	/>
+);
 
 export default Banner;

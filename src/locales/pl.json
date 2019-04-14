@@ -31,5 +31,13 @@
 			"thirdline": " "
 		}
 	},
-	"Footer": "Wszelkie prawa zastrzeżone!"
+	"Footer": "Wszelkie prawa zastrzeżone!",
+	"Notfound": {
+		"header": "Nie znaleziono",
+		"footer": {
+			"heading-primary": "Przykro nam!",
+			"heading-secondary": "Strona, której szukasz, nie istnieje lub wystąpił inny błąd!",
+			"link": "Wróć do strony głównej"
+		}
+	}
 }

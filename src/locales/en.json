@@ -31,5 +31,13 @@
 			"thirdline": "repositories."
 		}
 	},
-	"Footer": "All rights reserved!"
+	"Footer": "All rights reserved!",
+	"Notfound": {
+		"header": "Page not found",
+		"footer": {
+			"heading-primary": "Sorry!",
+			"heading-secondary": "The page you are looking for does not exist or another error occurred",
+			"link": "Go back home"
+		}
+	}
 }

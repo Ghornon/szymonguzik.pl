@@ -7,6 +7,7 @@ const IndexPage = ({ pageContext: { locale }, data }) => (
 		<SEO
 			title={locale === 'en' ? 'Home' : 'Strona główna'}
 			keywords={[`gatsby`, `application`, `react`]}
+			lang={locale}
 		/>
 		<LandingPage />
 		<About />

@@ -18,11 +18,11 @@ const aboutQuery = graphql`
 	}
 `;
 
-const AboutUI = props => (
+const AboutUI = ({ About }) => (
 	<StaticQuery
 		query={aboutQuery}
 		render={dataImage => {
-			const articlesList = getArticles({ data: props.About, ...dataImage });
+			const articlesList = getArticles({ data: About, ...dataImage });
 			return (
 				<section className="about">
 					<div className="container about__grid">{articlesList}</div>
