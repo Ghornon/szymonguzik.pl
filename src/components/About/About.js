@@ -24,7 +24,7 @@ const AboutUI = ({ About }) => (
 		render={dataImage => {
 			const articlesList = getArticles({ data: About, ...dataImage });
 			return (
-				<section className="about">
+				<section className="about" id="about">
 					<div className="container about__grid">{articlesList}</div>
 				</section>
 			);

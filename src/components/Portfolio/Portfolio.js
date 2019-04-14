@@ -41,7 +41,7 @@ const PortfolioUI = ({ Portfolio }) => {
 	});
 
 	return (
-		<section className="portfolio">
+		<section className="portfolio" id="portfolio">
 			<div className="container portfolio__grid">
 				<div className="portfolio__item portfolio__item--large">
 					<header className="portfolio__header">

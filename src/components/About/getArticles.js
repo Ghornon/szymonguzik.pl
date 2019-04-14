@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { FaUserSecret, FaBriefcase, FaQuoteRight, FaImage } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
+import scrollToElement from 'scroll-to-element';
 
 import { AboutArticle } from './index';
 
@@ -58,7 +59,20 @@ const getArticles = ({ data, image }) => {
 			),
 			icon: icons[index],
 			footer: (
-				<a href={element.buttonTarget} className="about__button">
+				<a
+					href={element.buttonTarget}
+					className="about__button"
+					onClick={event => {
+						event.preventDefault();
+						const vw = window.innerWidth > 1200;
+						scrollToElement(element.buttonTarget, {
+							align: vw ? 'middle' : 'top',
+							offset: vw ? 0 : -80,
+							ease: 'inOutQuad',
+							duration: 600
+						});
+					}}
+				>
 					{element.buttonLabel}
 				</a>
 			)

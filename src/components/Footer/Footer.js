@@ -7,7 +7,7 @@ import './Footer.scss';
 const Footer = ({ title }) => {
 	const year = new Date().getFullYear();
 	return (
-		<footer className="footer">
+		<footer className="footer" id="footer">
 			<Link to="/" className="footer__link">
 				{title}
 			</Link>{' '}

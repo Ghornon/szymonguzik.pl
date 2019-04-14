@@ -11,7 +11,7 @@ const ContactUI = ({ Contact }) => {
 		<ContactItem icon={icons[index]} {...element} key={`contactList-item-${index}`} />
 	));
 	return (
-		<section className="contact">
+		<section className="contact" id="contact">
 			<div className="container container--no-margin contact__grid ">{contactList}</div>
 		</section>
 	);

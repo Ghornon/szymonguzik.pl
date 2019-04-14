@@ -15,7 +15,7 @@ const BrandUI = ({ Brand }) => {
 		/>
 	));
 	return (
-		<section className="brand">
+		<section className="brand" id="brand">
 			<div className="container brand__grid">{brandList}</div>
 		</section>
 	);

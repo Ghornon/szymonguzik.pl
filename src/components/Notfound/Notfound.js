@@ -6,7 +6,7 @@ import { FaHome } from 'react-icons/fa';
 import './Notfound.scss';
 
 const Notfound = () => (
-	<section className="notfound">
+	<section className="notfound" id="notfound">
 		<header className="notfound__header">
 			<h1 className="notfound__404">
 				404

@@ -4,7 +4,7 @@ import './LandingPage.scss';
 import { Banner, Navbar } from './index';
 
 const LandingPage = () => (
-	<section className="landing-page">
+	<section className="landing-page" id="landing-page">
 		<div className="container-fluid">
 			<Navbar />
 			<Banner />
