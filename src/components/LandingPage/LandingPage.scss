@@ -1,7 +1,9 @@
 @import '@styles/abstarcts/_variables.scss';
+@import '@styles/abstarcts/_mixins.scss';
 
 .landing-page {
 	width: 100%;
 	background: linear-gradient($darkGray 50%, $lightGray 50%);
 	box-sizing: border-box;
+	@include interpolate(margin-bottom, $offsetSizes...);
 }

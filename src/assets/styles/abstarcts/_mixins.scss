@@ -18,27 +18,11 @@
 	}
 }
 
-@mixin aligne2center {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-@mixin aligneBackground {
-	background-position: top center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
 @mixin boxShadow($value: 0.2) {
 	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, $value);
 }
 
-@mixin OnHoverShadow($value: 0.2) {
-
-
+@mixin onHoverShadow($value: 0.2) {
 	&::after {
 		content: '';
 		width: 100%;
@@ -55,4 +39,9 @@
 	&:hover::after {
 		opacity: 1;
 	}
+}
+
+@mixin offset {
+	@include interpolate(padding-top, $offsetSizes...);
+	@include interpolate(padding-bottom, $offsetSizes...);
 }

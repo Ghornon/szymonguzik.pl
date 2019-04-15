@@ -2,7 +2,7 @@
 @import '@styles/abstarcts/_mixins.scss';
 
 .portfolio {
-	margin-bottom: 100px;
+	@include offset;
 
 	&__grid {
 		padding: 0 20px;
@@ -22,8 +22,12 @@
 	&__item {
 		background: $white;
 		position: relative;
-		margin: 30px 0;
-		@include OnHoverShadow;
+		margin-top: 30px;
+		@include onHoverShadow;
+
+		&:first-child {
+			margin: 0;
+		}
 
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			margin: 0;
@@ -74,7 +78,6 @@
 		}
 	}
 
-
 	&__header {
 		position: relative;
 	}
@@ -97,12 +100,17 @@
 	&__footer {
 		padding: 30px 20px 20px 20px;
 		text-align: center;
+		min-height: 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__heading {
-
 		&--primary {
 			margin-top: 0;
+			position: relative;
 		}
 
 		&--uppercase {
@@ -121,6 +129,7 @@
 
 	&__paragraph {
 		text-align: center;
+		margin: 5px;
 	}
 
 	&__link {
@@ -128,11 +137,11 @@
 		cursor: pointer;
 		transition-duration: 250ms;
 		text-decoration: none;
-		position: relative;
+		// position: relative;
 
 		&::after {
 			content: '';
-			width: 40px;
+			width: 50px;
 			height: 2px;
 			background: $darkGray;
 			position: absolute;
@@ -145,7 +154,7 @@
 
 		&--flex {
 			display: inline-flex;
-			margin: 0 5px;
+			margin-left: 5px;
 			font-weight: bold;
 
 			&::after {
@@ -158,8 +167,6 @@
 		}
 
 		&:hover {
-			// color: $primaryColor;
-
 			&::after {
 				opacity: 1;
 			}

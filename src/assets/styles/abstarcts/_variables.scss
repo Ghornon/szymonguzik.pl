@@ -18,10 +18,8 @@ $headingBoldColor: #212121;
 
 /* Fonts */
 
-$primaryFont: 'Hind',
-sans-serif;
-$headingFont: 'Montserrat',
-sans-serif;
+$primaryFont: 'Hind', sans-serif;
+$headingFont: 'Montserrat', sans-serif;
 
 /* Shadows */
 
@@ -29,20 +27,30 @@ $bannerShdadow: 0px 6px 20px -1px rgba(0, 0, 0, 0.6);
 
 /* Breakpoints */
 
-$breakpoints: (xs: 576px,
-s: 576px,
-m: 768px,
-l: 992px,
-xl: 1200px);
+$breakpoints: (
+	xs: 576px,
+	s: 576px,
+	m: 768px,
+	l: 992px,
+	xl: 1200px
+);
 
-$container: (xs: 100%,
-s: 540px,
-m: 720px,
-l: 960px,
-xl: 1140px);
+$container: (
+	xs: 100%,
+	s: 540px,
+	m: 720px,
+	l: 960px,
+	xl: 1140px
+);
 
-$containerPadding: (xs: 30px,
-s: 30px,
-m: 60px,
-l: 60px,
-xl: 60px);
+$containerPadding: (
+	xs: 30px,
+	s: 30px,
+	m: 60px,
+	l: 60px,
+	xl: 60px
+);
+
+/* Section offset */
+
+$offsetSizes: 320px, 768px, 15px, 40px;
