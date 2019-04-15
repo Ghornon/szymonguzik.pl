@@ -7,7 +7,7 @@ import './Banner.scss';
 
 const bannerImageQuery = graphql`
 	query {
-		bannerImage: file(relativePath: { eq: "banner.png" }) {
+		bannerImage: file(relativePath: { eq: "banner.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 1920) {
 					...GatsbyImageSharpFluid

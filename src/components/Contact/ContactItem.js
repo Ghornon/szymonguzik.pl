@@ -22,7 +22,7 @@ const ContactItem = ({ title, icon, description, linkName, linkAddress = '#' }) 
 					onClick={onClick}
 				>
 					{emailAddress[0]}
-					<span style={{ display: 'none' }}>no-robots</span>@{emailAddress[1]}
+					<span className="sr-only">no-robots</span>@{emailAddress[1]}
 				</a>
 			);
 		}

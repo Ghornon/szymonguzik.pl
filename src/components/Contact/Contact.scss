@@ -1,4 +1,5 @@
 @import '@styles/abstarcts/_variables.scss';
+@import '@styles/abstarcts/_functions.scss';
 @import '@styles/abstarcts/_mixins.scss';
 
 .contact {
@@ -37,16 +38,25 @@
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 			grid-gap: 30px;
 			position: absolute;
-			top: 0;
+			top: 50%;
 			left: 50%;
-			transform: translateX(-50%);
+			transform: translate(-50%, -50%);
+			height: auto;
 		}
 	}
 
 	&__item {
-		// margin: 30px;
+		margin-top: 60px;
 		text-align: center;
 		z-index: 30;
+
+		&:first-child {
+			margin-top: -30px;
+		}
+
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
+			margin-top: 0;
+		}
 
 		&:last-child {
 			@media only screen and (min-width: map-get($breakpoints, 'm')) and (max-width: map-get($breakpoints, 'l')) {
@@ -62,10 +72,14 @@
 		height: $size;
 		margin: 0 auto;
 		color: $white;
-		padding: $size / 2;
+		padding: $size / 4;
 		animation-name: pulse;
 		animation-duration: 3s;
 		animation-iteration-count: infinite;
+
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
+			padding: $size / 2;
+		}
 
 		svg {
 			width: $size;

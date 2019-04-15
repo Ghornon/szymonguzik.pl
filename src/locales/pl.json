@@ -7,6 +7,10 @@
 			"title": "404: Nie znaleziono"
 		}
 	},
+	"Navbar": {
+		"goback": "Wróć do strony głównej",
+		"language": "Zmień język"
+	},
 	"Banner": {
 		"header": "Jestem Szymon",
 		"subHeader": "Szukam stażu"

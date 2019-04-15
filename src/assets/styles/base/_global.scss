@@ -16,8 +16,7 @@ body {
 	margin: 0 auto;
 	box-sizing: border-box;
 
-	@each $key,
-	$value in $breakpoints {
+	@each $key, $value in $breakpoints {
 		@media only screen and (min-width: map-get($breakpoints, $key)) {
 			width: map-get($container, $key);
 			padding: 0;
@@ -34,8 +33,7 @@ body {
 	padding: 0 20px;
 	box-sizing: border-box;
 
-	@each $key,
-	$value in $breakpoints {
+	@each $key, $value in $breakpoints {
 		@media only screen and (min-width: map-get($breakpoints, $key)) {
 			padding: 0 map-get($containerPadding, $key);
 		}
@@ -46,6 +44,22 @@ body {
 	}
 }
 
-section {
-	z-index: 10;
+/* Structural markup */
+
+.sr {
+	&-only {
+		display: none;
+	}
+}
+
+#gatsby-noscript {
+	z-index: 1000;
+	text-align: center;
+	width: 100%;
+	background: $darkGray;
+	color: $white;
+	padding: 5px 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
 }

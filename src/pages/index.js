@@ -4,11 +4,7 @@ import { LandingPage, About, Portfolio, Brand, Contact, Layout, SEO } from '../c
 
 const IndexPage = ({ pageContext: { locale }, data }) => (
 	<Layout locale={locale} queryData={data}>
-		<SEO
-			title={locale === 'en' ? 'Home' : 'Strona główna'}
-			keywords={[`gatsby`, `application`, `react`]}
-			lang={locale}
-		/>
+		<SEO title={locale === 'en' ? 'Home' : 'Strona główna'} lang={locale} />
 		<LandingPage />
 		<About />
 		<Portfolio />

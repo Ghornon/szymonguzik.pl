@@ -1,3 +1,6 @@
+@import '@styles/abstarcts/_variables.scss';
+@import '@styles/abstarcts/_functions.scss';
+
 @mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value) {
 	& {
 		@each $property in $properties {
