@@ -1,6 +1,6 @@
 # szymonguzik.pl - portfolio
 
-![szymonguzik.pl](dist/img/ogimage.jpg)
+![szymonguzik.pl](src/assets/images/ogimage.jpg)
 
 ## My personal portfolio website
 
@@ -29,5 +29,5 @@ Icons used in project are from [fontawesome.io.](http://fontawesome.io) on [lice
 
 #### Photos
 
--   [Banner](https://unsplash.com/photos/) created by [@author](https://unsplash.com/@author)
--   [Contact](https://unsplash.com/photos/) created by [@author](https://unsplash.com/@author)
+[Background photo](https://unsplash.com/photos/fDsCIIGdw9g) created by [
+Ewan Robertson](https://unsplash.com/@ewan121)
