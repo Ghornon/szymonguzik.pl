@@ -77,7 +77,21 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
 	lang: `en`,
 	meta: [],
-	keywords: []
+	keywords: [
+		'web',
+		'programer',
+		'designer',
+		'front-end',
+		'developer',
+		'szymon',
+		'guzik',
+		'szymonguzik.pl',
+		'software',
+		'engineer',
+		'JavaScript',
+		'React',
+		'GatsbyJS'
+	]
 };
 
 SEO.propTypes = {

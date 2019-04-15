@@ -1,9 +1,9 @@
 const path = require('path');
-const dotenv = require('dotenv');
+require('dotenv').config();
 
-if (process.env.NODE_ENV !== 'production') {
+/* if (process.env.NODE_ENV !== 'production') {
 	dotenv.config();
-}
+} */
 
 module.exports = {
 	siteMetadata: {
@@ -34,11 +34,7 @@ module.exports = {
 				icon: `src/assets/images/icon.png`
 			}
 		},
-		`gatsby-plugin-sass`,
-		`gatsby-plugin-postcss`,
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// 'gatsby-plugin-offline',
+
 		{
 			resolve: `gatsby-plugin-alias-imports`,
 			options: {
@@ -57,10 +53,12 @@ module.exports = {
 			resolve: `gatsby-source-contentful`,
 			options: {
 				spaceId: `42pm29yjtfwf`,
-				// Learn about environment variables: https://gatsby.dev/env-vars
 				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 			}
 		},
-		`@contentful/gatsby-transformer-contentful-richtext`
+		`@contentful/gatsby-transformer-contentful-richtext`,
+		`gatsby-plugin-sass`,
+		`gatsby-plugin-postcss`,
+		'gatsby-plugin-offline'
 	]
 };
