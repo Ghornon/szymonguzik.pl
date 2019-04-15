@@ -56,6 +56,10 @@
 
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			margin-top: 0;
+
+			&:first-child {
+				margin-top: 0;
+			}
 		}
 
 		&:last-child {

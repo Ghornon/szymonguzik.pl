@@ -1,10 +1,10 @@
 # szymonguzik.pl - portfolio
 
-![szymonguzik.pl](dist/img/ogimage.jpg)
+![szymonguzik.pl](static/ogimage.jpg)
 
 ## My personal portfolio website
 
-See [demo](https://szymonguzik.netlify.com/) on [netlify.com](https://netlify.com)
+See [demo](https://szymonguzik.pl/) on [netlify.com](https://netlify.com)
 
 Built using [GatsbyJS](https://github.com/Ghornon/gulp-automation) and [Gatsby's default starter](https://www.gatsbyjs.org/docs/gatsby-starters/).
 
@@ -14,7 +14,7 @@ Built using [GatsbyJS](https://github.com/Ghornon/gulp-automation) and [Gatsby's
 -   [React](https://reactjs.org/)
 -   [GraphQL](https://graphql.org/)
 -   [Sass](https://sass-lang.com/)
--   [fontawesome.io.](http://fontawesome.io/)
+-   [fontawesome.io](http://fontawesome.io/)
 -   [scroll-to-element](https://www.npmjs.com/package/scroll-to-element/)
 -   [ESLint](https://eslint.org/)
 -   [Prettier](https://prettier.io/)
@@ -29,5 +29,5 @@ Icons used in project are from [fontawesome.io.](http://fontawesome.io) on [lice
 
 #### Photos
 
--   [Banner](https://unsplash.com/photos/) created by [@author](https://unsplash.com/@author)
--   [Contact](https://unsplash.com/photos/) created by [@author](https://unsplash.com/@author)
+[Background photo](https://unsplash.com/photos/fDsCIIGdw9g) created by [
+Ewan Robertson](https://unsplash.com/@ewan121)
