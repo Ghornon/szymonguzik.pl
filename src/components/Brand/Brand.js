@@ -10,7 +10,7 @@ const BrandUI = ({ Brand }) => {
 		<BrandItem
 			key={`brand-item-${index}`}
 			name={element.title}
-			icon={icons[index]}
+			icon={icons.find(({ type: { displayName } }) => displayName === element.iconName)}
 			content={element.content.childContentfulRichText.html}
 		/>
 	));

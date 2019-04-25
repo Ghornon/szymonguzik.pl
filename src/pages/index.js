@@ -22,6 +22,7 @@ export const indexQuery = graphql`
 				node {
 					id
 					title
+					iconName
 					subtitle
 					content {
 						childContentfulRichText {
@@ -39,13 +40,13 @@ export const indexQuery = graphql`
 				node {
 					id
 					name
+					iconName
 					description
 					image {
 						fluid {
 							...GatsbyContentfulFluid
 						}
 					}
-					iconName
 					link
 					node_locale
 				}
@@ -56,6 +57,7 @@ export const indexQuery = graphql`
 				node {
 					id
 					title
+					iconName
 					content {
 						childContentfulRichText {
 							html
@@ -70,6 +72,7 @@ export const indexQuery = graphql`
 				node {
 					id
 					title
+					iconName
 					description
 					linkName
 					linkAddress

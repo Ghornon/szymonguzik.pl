@@ -8,7 +8,11 @@ import './Contact.scss';
 const ContactUI = ({ Contact }) => {
 	const icons = [<FaRegEnvelope />, <FaLinkedin />, <FaGithub />];
 	const contactList = Contact.map((element, index) => (
-		<ContactItem icon={icons[index]} {...element} key={`contactList-item-${index}`} />
+		<ContactItem
+			{...element}
+			icon={icons.find(({ type: { displayName } }) => displayName === element.iconName)}
+			key={`contactList-item-${index}`}
+		/>
 	));
 	return (
 		<section className="contact" id="contact">
