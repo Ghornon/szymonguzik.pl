@@ -1,8 +1,8 @@
 {
 	"name": "szymonguzik.pl",
-	"private": true,
+	"private": false,
 	"description": "My personal gatsbyJS site",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"author": "Szymon Guzik",
 	"dependencies": {
 		"@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",

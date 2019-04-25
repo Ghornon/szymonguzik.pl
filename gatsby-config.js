@@ -1,9 +1,5 @@
-const path = require('path');
 require('dotenv').config();
-
-/* if (process.env.NODE_ENV !== 'production') {
-	dotenv.config();
-} */
+const path = require('path');
 
 module.exports = {
 	siteMetadata: {
@@ -25,11 +21,11 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
+				name: `szymon-guzik-pl`,
+				short_name: `szymonguzik.pl`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#212429`,
+				theme_color: `#212429`,
 				display: `minimal-ui`,
 				icon: `src/assets/images/icon.png`,
 				icons: [
@@ -76,7 +72,6 @@ module.exports = {
 				]
 			}
 		},
-
 		{
 			resolve: `gatsby-plugin-alias-imports`,
 			options: {
@@ -94,7 +89,7 @@ module.exports = {
 		{
 			resolve: `gatsby-source-contentful`,
 			options: {
-				spaceId: `42pm29yjtfwf`,
+				spaceId: process.env.CONTENTFUL_SPACE_ID,
 				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 			}
 		},
