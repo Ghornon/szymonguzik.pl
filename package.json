@@ -34,12 +34,14 @@
 		"eslint": "^5.12.1",
 		"eslint-config-prettier": "^3.6.0",
 		"eslint-config-standard": "^12.0.0",
-		"eslint-plugin-import": "^2.15.0",
+		"eslint-plugin-import": "^2.17.2",
 		"eslint-plugin-node": "^8.0.1",
 		"eslint-plugin-prettier": "^3.0.1",
 		"eslint-plugin-promise": "^4.0.1",
 		"eslint-plugin-react": "^7.12.4",
 		"eslint-plugin-standard": "^4.0.0",
+		"husky": "^2.2.0",
+		"lint-staged": "^8.1.6",
 		"node-sass": "^4.11.0",
 		"postcss-loader": "^3.0.0",
 		"postcss-preset-env": "^6.6.0",
@@ -47,22 +49,41 @@
 		"sass": "^1.16.1"
 	},
 	"keywords": [
-		"gatsby"
+		"web",
+		"programer",
+		"designer",
+		"front-end",
+		"developer",
+		"szymon",
+		"guzik",
+		"ghornon",
+		"szymonguzik.pl",
+		"software",
+		"engineer",
+		"JavaScript",
+		"React",
+		"GatsbyJS"
 	],
 	"license": "MIT",
 	"scripts": {
 		"build": "gatsby build",
 		"develop": "gatsby develop",
-		"format": "prettier --write src/**/*.{js,jsx}",
+		"format": "prettier --config .prettierrc.json --write src/**/*.{js,jsx}",
+		"lint": "eslint --fix src/**/*.js",
 		"start": "gatsby build && gatsby serve",
 		"serve": "gatsby serve",
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
 	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/gatsbyjs/gatsby-starter-default"
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
 	},
-	"bugs": {
-		"url": "https://github.com/gatsbyjs/gatsby/issues"
+	"lint-staged": {
+		"src/**/*.{js,jsx}": [
+			"prettier --config .prettierrc.json --write",
+			"eslint --fix",
+			"git add"
+		]
 	}
 }
