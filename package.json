@@ -46,7 +46,11 @@
 		"postcss-loader": "^3.0.0",
 		"postcss-preset-env": "^6.6.0",
 		"prettier": "^1.15.2",
-		"sass": "^1.16.1"
+		"sass": "^1.16.1",
+		"stylelint": "^10.0.1",
+		"stylelint-config-recommended": "^2.2.0",
+		"stylelint-config-recommended-scss": "^3.3.0",
+		"stylelint-scss": "^3.6.1"
 	},
 	"keywords": [
 		"web",
@@ -70,6 +74,7 @@
 		"develop": "gatsby develop",
 		"format": "prettier --config .prettierrc.json --write src/**/*.{js,jsx}",
 		"lint": "eslint --fix src/**/*.js",
+		"stylelint": "stylelint --fix src/**/*.scss",
 		"start": "gatsby build && gatsby serve",
 		"serve": "gatsby serve",
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
@@ -83,6 +88,10 @@
 		"src/**/*.{js,jsx}": [
 			"prettier --config .prettierrc.json --write",
 			"eslint --fix",
+			"git add"
+		],
+		"src/**/*.{css,scss,sass}": [
+			"stylelint --fix",
 			"git add"
 		]
 	}

@@ -4,6 +4,35 @@
 .portfolio {
 	@include offset;
 
+	&__header {
+		position: relative;
+	}
+
+	&__icon {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		width: 30px;
+		height: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: $darkGray;
+		color: $white;
+	}
+
+	&__footer {
+		padding: 30px 20px 20px 20px;
+		text-align: center;
+		min-height: 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
 	&__grid {
 		padding: 0 20px;
 
@@ -78,35 +107,6 @@
 		}
 	}
 
-	&__header {
-		position: relative;
-	}
-
-	&__icon {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translate(-50%, 50%);
-		width: 30px;
-		height: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background: $darkGray;
-		color: $white;
-	}
-
-	&__footer {
-		padding: 30px 20px 20px 20px;
-		text-align: center;
-		min-height: 100px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
 	&__heading {
 		&--primary {
 			margin-top: 0;
@@ -137,7 +137,6 @@
 		cursor: pointer;
 		transition-duration: 250ms;
 		text-decoration: none;
-		// position: relative;
 
 		&::after {
 			content: '';

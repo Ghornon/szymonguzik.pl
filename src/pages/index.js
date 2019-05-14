@@ -44,7 +44,7 @@ export const indexQuery = graphql`
 					description
 					image {
 						fluid {
-							...GatsbyContentfulFluid
+							...GatsbyContentfulFluid_noBase64
 						}
 					}
 					link

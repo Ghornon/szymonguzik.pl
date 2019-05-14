@@ -63,14 +63,13 @@
 		cursor: pointer;
 		background: #2e303c;
 		transition: 400ms;
-		border-radius: 34px;
 		border: 2px solid #3d3e46;
 		border-radius: 34px;
 		position: relative;
 		box-sizing: border-box;
 		backface-visibility: hidden;
 
-		&::before {
+		&:before {
 			position: absolute;
 			content: '';
 			height: 22px;
