@@ -29,5 +29,7 @@ Icons used in project are from [fontawesome.io.](http://fontawesome.io) on [lice
 
 #### Photos
 
+[Banner photo](https://unsplash.com/photos/a2NRu2Wxa2o) created by [
+Luke Chesser](https://unsplash.com/@lukechesser1)
 [Background photo](https://unsplash.com/photos/fDsCIIGdw9g) created by [
 Ewan Robertson](https://unsplash.com/@ewan121)
