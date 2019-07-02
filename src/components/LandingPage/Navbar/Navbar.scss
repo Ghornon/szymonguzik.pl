@@ -12,10 +12,14 @@
 		justify-content: space-between;
 		text-align: center;
 		color: white;
-		padding: 10px;
 		box-sizing: border-box;
 		margin: 0;
 		list-style: none;
+		padding: 10px 0;
+
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
+			padding: 10px;
+		}
 
 		&-item {
 			margin: 0;
@@ -44,6 +48,7 @@
 		justify-content: center;
 		height: 40px;
 		line-height: 40px;
+		margin-right: -10px;
 	}
 
 	&__checkbox {

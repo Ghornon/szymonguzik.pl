@@ -7,4 +7,5 @@
 	background: linear-gradient($darkGray 50%, $lightGray 50%);
 	box-sizing: border-box;
 	@include interpolate(margin-bottom, $offsetSizes...);
+	border: 0;
 }
