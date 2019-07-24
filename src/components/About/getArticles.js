@@ -65,7 +65,6 @@ const getArticles = ({ data, image }) => {
 					onClick={event => {
 						event.preventDefault();
 						const vw = window.innerWidth > 1200;
-						console.log(vw);
 						scrollToElement(element.buttonTarget, {
 							align: vw ? 'middle' : 'top',
 							ease: 'inOutQuad',

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { FormattedMessage } from 'react-intl';
+import scrollToElement from 'scroll-to-element';
 
 import './Banner.scss';
 
@@ -25,6 +26,9 @@ const viewport = () => {
 const Banner = () => {
 	useEffect(() => {
 		viewport();
+		setTimeout(function() {
+			window.scrollTo(0, 1);
+		}, 100);
 		window.addEventListener('resize', viewport);
 
 		return () => {
@@ -49,6 +53,18 @@ const Banner = () => {
 						<h2 className="banner__heading banner__heading--secondary">
 							<FormattedMessage id="Banner.subHeader" />
 						</h2>
+						<button
+							className="banner__button"
+							onClick={event => {
+								event.preventDefault();
+								scrollToElement('.about', {
+									ease: 'inOutQuad',
+									duration: 600
+								});
+							}}
+						>
+							<FormattedMessage id="Banner.button" />
+						</button>
 					</header>
 				</div>
 			)}

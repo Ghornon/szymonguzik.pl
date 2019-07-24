@@ -13,7 +13,8 @@
 	},
 	"Banner": {
 		"header": "I'm Szymon",
-		"subHeader": "I'm looking for my first job"
+		"subHeader": "I'm looking for my first job",
+		"button": "About me"
 	},
 	"About": {
 		"quote": {

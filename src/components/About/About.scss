@@ -77,6 +77,34 @@
 		border-right: 1px solid $primaryColor;
 		cursor: pointer;
 		position: relative;
+		overflow: hidden;
+
+		&::before,
+		&::after {
+			width: 1px;
+			height: 100%;
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			background: $primaryColor;
+			transition-duration: 250ms;
+		}
+		&::before {
+			left: 0;
+			transform: translateX(-100%);
+		}
+		&::after {
+			right: 0;
+			transform: translateX(100%);
+		}
+
+		&:hover {
+			&::before,
+			&::after {
+				transform: translateX(0);
+			}
+		}
 	}
 
 	&__article {
