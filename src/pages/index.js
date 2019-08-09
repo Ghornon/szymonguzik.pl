@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { LandingPage, About, Portfolio, Brand, Contact, Layout, SEO } from '../components';
+import { LandingPage, About, Portfolio, Brand, Contact, Layout, SEO } from '@components';
 
 const IndexPage = ({ pageContext: { locale }, data }) => (
 	<Layout locale={locale} queryData={data}>
@@ -41,13 +41,26 @@ export const indexQuery = graphql`
 					id
 					name
 					iconName
-					description
+
+					shortDescription
+					description {
+						description
+					}
+
+					demoLink
+					sourceLink
+
+					slug
+					order
+
+					technologyStack
+
 					image {
 						fluid {
 							...GatsbyContentfulFluid_noBase64
 						}
 					}
-					link
+
 					node_locale
 				}
 			}

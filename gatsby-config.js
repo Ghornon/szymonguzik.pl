@@ -81,7 +81,8 @@ module.exports = {
 					'@pages': path.resolve(__dirname, 'src/pages'),
 					'@styles': path.resolve(__dirname, 'src/assets/styles'),
 					'@store': path.relative(__dirname, 'src/store'),
-					'@actions': path.relative(__dirname, 'src/actions')
+					'@locales': path.relative(__dirname, 'src/locales'),
+					'@components': path.relative(__dirname, 'src/components')
 				},
 				extensions: []
 			}

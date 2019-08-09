@@ -26,7 +26,7 @@ const viewport = () => {
 const Banner = () => {
 	useEffect(() => {
 		viewport();
-		setTimeout(function() {
+		setTimeout(() => {
 			window.scrollTo(0, 1);
 		}, 100);
 		window.addEventListener('resize', viewport);

@@ -1,7 +1,9 @@
 import React from 'react';
 
 import './LandingPage.scss';
-import { Banner, Navbar } from './index';
+
+import { Banner } from './index';
+import { Navbar } from '../Navbar';
 
 const LandingPage = () => (
 	<section className="landing-page" id="landing-page">

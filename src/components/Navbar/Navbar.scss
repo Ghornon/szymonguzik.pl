@@ -24,6 +24,7 @@
 		&-item {
 			margin: 0;
 			padding: 0;
+			line-height: 40px;
 		}
 	}
 
@@ -96,5 +97,18 @@
 		text-decoration: none;
 		display: inline-block;
 		margin-right: 10px;
+		opacity: 0;
+		animation-name: showLink;
+		animation-duration: 200ms;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes showLink {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 }

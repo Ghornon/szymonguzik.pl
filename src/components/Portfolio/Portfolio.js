@@ -2,43 +2,33 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { connectWithStore } from '@store/Store';
 import { FormattedMessage } from 'react-intl';
-import {
-	FaShoppingCart,
-	FaCamera,
-	FaPaintBrush,
-	FaImage,
-	FaPen,
-	FaThumbtack,
-	FaDrumstickBite,
-	FaGithub
-} from 'react-icons/fa';
+
+import { FaPen, FaGithub } from 'react-icons/fa';
 
 import './Portfolio.scss';
 
 import { PortfolioItem } from './index';
 
-const PortfolioUI = ({ Portfolio }) => {
-	const icons = [
-		<FaThumbtack />,
-		<FaCamera />,
-		<FaPaintBrush />,
-		<FaDrumstickBite />,
-		<FaImage />,
-		<FaShoppingCart />
-	];
-
-	const itemsList = Portfolio.map(({ image, name, description, link, iconName }, index) => {
-		return (
-			<PortfolioItem
-				key={`portfolio-item-${index}`}
-				icon={icons.find(({ type: { displayName } }) => displayName === iconName)}
-				image={<Img fluid={image.fluid} className="" alt={`Image of ${name} project`} />}
-				name={name}
-				description={description}
-				link={link}
-			/>
-		);
-	});
+const PortfolioUI = ({ Portfolio, locale }) => {
+	const itemsList = [...Portfolio]
+		.sort((current, next) => (current.order > next.order ? 1 : -1))
+		.map(({ image, name, shortDescription, link, iconName, slug, order }, index) => {
+			return (
+				<PortfolioItem
+					key={`portfolio-item-${index}`}
+					iconName={iconName}
+					image={
+						<Img fluid={image.fluid} className="" alt={`Image of ${name} project`} />
+					}
+					name={name}
+					shortDescription={shortDescription}
+					link={link}
+					slug={slug}
+					order={order}
+					locale={locale}
+				/>
+			);
+		});
 
 	return (
 		<section className="portfolio" id="portfolio">
