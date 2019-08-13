@@ -32,12 +32,14 @@ const icons = [
 
 class DetailPageUI extends Component {
 	componentDidMount() {
-		const vw = window.innerWidth > 1200;
-		scrollToElement('#detail', {
-			align: vw ? 'middle' : 'top',
-			ease: 'inOutQuad',
-			duration: 600
-		});
+		setTimeout(() => {
+			const vw = window.innerWidth > 1200;
+			scrollToElement('#detail', {
+				align: vw ? 'middle' : 'top',
+				ease: 'inOutQuad',
+				duration: 600
+			});
+		}, 500);
 	}
 
 	createReferenceArray = order => {
@@ -61,6 +63,7 @@ class DetailPageUI extends Component {
 			({ image, name, shortDescription, link, slug, order, iconName }, index) => {
 				return (
 					<PortfolioItem
+						className="detail__portfolio"
 						key={`portfolio-item-${index}`}
 						image={
 							<Img

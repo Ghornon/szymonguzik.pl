@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { StoreProvider } from '@store/Store';
 
 import '@styles/main.scss';
-import { Footer } from './index';
+import { Footer } from '@components';
 
 const siteMetadataQuery = graphql`
 	query SiteTitleQuery {

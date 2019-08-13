@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { Location } from '@reach/router';
 import Img from 'gatsby-image';
 import { FormattedMessage } from 'react-intl';
 import scrollToElement from 'scroll-to-element';
@@ -18,22 +19,10 @@ const bannerImageQuery = graphql`
 	}
 `;
 
-const viewport = () => {
-	const vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-};
-
 const Banner = () => {
 	useEffect(() => {
-		viewport();
-		setTimeout(() => {
-			window.scrollTo(0, 1);
-		}, 100);
-		window.addEventListener('resize', viewport);
-
-		return () => {
-			window.removeEventListener('resize', viewport);
-		};
+		const vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});
 
 	return (
@@ -53,18 +42,32 @@ const Banner = () => {
 						<h2 className="banner__heading banner__heading--secondary">
 							<FormattedMessage id="Banner.subHeader" />
 						</h2>
-						<button
-							className="banner__button"
-							onClick={event => {
-								event.preventDefault();
-								scrollToElement('.about', {
-									ease: 'inOutQuad',
-									duration: 600
-								});
+						<Location>
+							{locationProps => {
+								const { pathname } = locationProps.location;
+
+								return (
+									<button
+										className="banner__button"
+										onClick={event => {
+											event.preventDefault();
+											scrollToElement('.about', {
+												ease: 'inOutQuad',
+												duration: 600
+											});
+										}}
+										style={{
+											display:
+												pathname === '/' || pathname === '/pl/'
+													? 'inline-block'
+													: 'none'
+										}}
+									>
+										<FormattedMessage id="Banner.button" />
+									</button>
+								);
 							}}
-						>
-							<FormattedMessage id="Banner.button" />
-						</button>
+						</Location>
 					</header>
 				</div>
 			)}

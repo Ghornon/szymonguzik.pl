@@ -63,6 +63,7 @@
 		font-family: $headingFont;
 		cursor: pointer;
 		transition-duration: 250ms;
+		display: inline-block;
 
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			width: 200px;

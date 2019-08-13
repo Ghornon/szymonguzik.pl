@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
+import { LinkTo } from '@components';
 import { connectWithStore } from '@store/Store';
 import localesList from '@locales/locales';
 
@@ -24,10 +25,15 @@ class NavbarUI extends Component {
 	render() {
 		const { locale } = this.props;
 
-		const localesLinkList = Object.keys(localesList).map(element => (
-			<Link to={element === 'en' ? '/' : element} className="navbar__link" key={element}>
-				{element.toUpperCase()}
-			</Link>
+		const localesLinkList = Object.keys(localesList).map(currentLocale => (
+			<LinkTo
+				pathname="/"
+				locale={currentLocale}
+				className="navbar__link"
+				key={currentLocale}
+			>
+				{currentLocale.toUpperCase()}
+			</LinkTo>
 		));
 
 		return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import { FormattedMessage } from 'react-intl';
 
 import { FaCode, FaDesktop } from 'react-icons/fa';
 
@@ -21,6 +22,22 @@ const DetailPageArticle = ({
 
 	const content = description ? description.description : '';
 
+	const SourceLink = () =>
+		sourceLink ? (
+			<a href={sourceLink} className="detail__link">
+				<FaCode className="detail__link-icon" />{' '}
+				<FormattedMessage id="Detail.article.code" />
+			</a>
+		) : null;
+
+	const DemoLink = () =>
+		demoLink ? (
+			<a href={demoLink} className="detail__link">
+				<FaDesktop className="detail__link-icon" />{' '}
+				<FormattedMessage id="Detail.article.demo" />
+			</a>
+		) : null;
+
 	return (
 		<div className="detail__article">
 			<Img fluid={image.fluid} alt={name} className="detail__image" o />
@@ -35,12 +52,8 @@ const DetailPageArticle = ({
 				</h4>
 
 				<h4 className="detail__heading detail__heading--link">
-					<a href={sourceLink} className="detail__link">
-						<FaCode className="detail__link-icon" /> Code
-					</a>
-					<a href={demoLink} className="detail__link">
-						<FaDesktop className="detail__link-icon" /> Demo
-					</a>
+					<SourceLink />
+					<DemoLink />
 				</h4>
 			</header>
 

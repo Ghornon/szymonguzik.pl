@@ -10,7 +10,7 @@ import {
 	FaDrumstickBite
 } from 'react-icons/fa';
 
-const PortfolioItem = ({ iconName, image, name, shortDescription, locale, slug }) => {
+const PortfolioItem = ({ iconName, image, name, shortDescription, locale, slug, className }) => {
 	const icons = [
 		<FaThumbtack />,
 		<FaCamera />,
@@ -20,7 +20,7 @@ const PortfolioItem = ({ iconName, image, name, shortDescription, locale, slug }
 		<FaShoppingCart />
 	];
 	return (
-		<div className="portfolio__item">
+		<div className={`portfolio__item ${className}`}>
 			<header className="portfolio__header">
 				<div className="portfolio__image">{image}</div>
 				<div className="portfolio__icon">

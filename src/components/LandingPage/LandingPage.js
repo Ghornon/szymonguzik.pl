@@ -3,7 +3,7 @@ import React from 'react';
 import './LandingPage.scss';
 
 import { Banner } from './index';
-import { Navbar } from '../Navbar';
+import { Navbar } from '@components';
 
 const LandingPage = () => (
 	<section className="landing-page" id="landing-page">

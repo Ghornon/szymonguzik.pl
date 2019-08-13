@@ -1,5 +1,6 @@
 const locales = require('./src/locales/locales.js');
 const path = require('path');
+const slugify = require('slugify');
 
 exports.onCreatePage = ({ page, actions }) => {
 	const { createPage, deletePage } = actions;
@@ -73,9 +74,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
 	portfolioQuery.data.Portfolio.edges.forEach(item => {
 		const lang = item.node.node_locale;
-		const localizedPath = locales[lang].default
-			? item.node.slug
-			: locales[lang].path + '/' + item.node.slug;
+		const slug = slugify(item.node.slug);
+		const localizedPath = locales[lang].default ? slug : locales[lang].path + '/' + slug;
 
 		createPage({
 			path: localizedPath,

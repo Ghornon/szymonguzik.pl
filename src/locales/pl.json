@@ -44,5 +44,11 @@
 			"heading-secondary": "Strona, której szukasz, nie istnieje lub wystąpił inny błąd!",
 			"link": "Wróć do strony głównej"
 		}
+	},
+	"Detail": {
+		"article": {
+			"code": "Kod",
+			"demo": "Strona"
+		}
 	}
 }

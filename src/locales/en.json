@@ -44,5 +44,11 @@
 			"heading-secondary": "The page you are looking for does not exist or another error occurred",
 			"link": "Go back home"
 		}
+	},
+	"Detail": {
+		"article": {
+			"code": "code",
+			"demo": "Live demo"
+		}
 	}
 }

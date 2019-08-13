@@ -1,19 +1,16 @@
 import React from 'react';
 import { Link, navigate } from 'gatsby';
+import slugify from 'slugify';
 
 const LinkTo = props => {
 	const { pathname, locale, children, className } = props;
 
-	if (locale === 'en') {
-		return (
-			<Link to={pathname} className={className}>
-				{children}
-			</Link>
-		);
-	}
+	const normalizedPath = slugify(pathname);
+
+	const localePath = locale === 'en' ? `/${normalizedPath}` : `/${locale}/${normalizedPath}`;
 
 	return (
-		<Link to={`/${locale}/${pathname}`} className={className}>
+		<Link to={localePath} className={className}>
 			{children}
 		</Link>
 	);

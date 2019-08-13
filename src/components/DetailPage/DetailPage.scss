@@ -9,7 +9,7 @@
 
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 30px;
 			padding: 0;
 		}
@@ -42,33 +42,37 @@
 	}
 
 	&__article {
+		background: $white;
+		position: relative;
+		@include onHoverShadow;
+
 		grid-column: auto / span 2;
 		grid-row: auto / span 3;
-		background: $white;
-		position: relative;
-		@include onHoverShadow;
 	}
 
-	&__jumbotron {
-		background: $white;
-		position: relative;
-		padding: 20px;
-		text-align: center;
-		min-height: 250px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		grid-column: auto / span 2;
-		@include onHoverShadow;
+	&__portfolio {
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
+			grid-column: 3;
+			grid-row: 1;
 
-		.detail__header {
-			padding: 0;
-			position: static;
+			&:last-child {
+				grid-column: 3;
+				grid-row: 2;
+				margin: 0;
+				width: 100%;
+			}
 		}
 
-		.detail__footer {
-			padding: 0;
+		@media only screen and (min-width: map-get($breakpoints, 'xl')) {
+			grid-column: auto;
+			grid-row: auto;
+
+			&:last-child {
+				grid-column: 3;
+				grid-row: 2;
+				margin: 0;
+				width: 100%;
+			}
 		}
 	}
 
@@ -123,7 +127,7 @@
 		justify-content: center;
 
 		list-style: none;
-		padding: 0;
+		padding: 0 0 30px 0;
 		margin: -25px 0 0 0;
 
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
@@ -150,9 +154,24 @@
 
 .jumbotron {
 	margin-top: 30px;
+	background: $white;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	min-height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include onHoverShadow;
 
 	@media only screen and (min-width: map-get($breakpoints, 'm')) {
 		margin: 0;
+		grid-column: auto / span 3;
+	}
+
+	@media only screen and (min-width: map-get($breakpoints, 'xl')) {
+		grid-column: auto / span 2;
 	}
 
 	&__link {
