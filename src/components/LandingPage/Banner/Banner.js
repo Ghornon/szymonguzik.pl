@@ -52,8 +52,8 @@ const Banner = () => {
 										onClick={event => {
 											event.preventDefault();
 											scrollToElement('.about', {
-												ease: 'inOutQuad',
-												duration: 600
+												ease: 'inOutExpo',
+												duration: 1000
 											});
 										}}
 										style={{

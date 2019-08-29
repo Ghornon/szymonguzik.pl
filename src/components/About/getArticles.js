@@ -67,8 +67,8 @@ const getArticles = ({ data, image }) => {
 						const vw = window.innerWidth > 1200;
 						scrollToElement(element.buttonTarget, {
 							align: vw ? 'middle' : 'top',
-							ease: 'inOutQuad',
-							duration: 600
+							ease: 'inOutExpo',
+							duration: 1000
 						});
 					}}
 				>

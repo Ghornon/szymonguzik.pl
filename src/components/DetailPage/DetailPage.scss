@@ -46,30 +46,16 @@
 		position: relative;
 		@include onHoverShadow;
 
-		grid-column: auto / span 2;
+		grid-column: auto / span 3;
 		grid-row: auto / span 3;
 	}
 
 	&__portfolio {
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
-			grid-column: 3;
-			grid-row: 1;
-
-			&:last-child {
-				grid-column: 3;
-				grid-row: 2;
-				margin: 0;
-				width: 100%;
-			}
-		}
-
-		@media only screen and (min-width: map-get($breakpoints, 'xl')) {
 			grid-column: auto;
-			grid-row: auto;
 
 			&:last-child {
-				grid-column: 3;
-				grid-row: 2;
+				grid-column: auto;
 				margin: 0;
 				width: 100%;
 			}

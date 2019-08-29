@@ -21,6 +21,7 @@ export const indexQuery = graphql`
 					iconName
 					slug
 					order
+					shortDescription
 					image {
 						fluid {
 							...GatsbyContentfulFluid_noBase64

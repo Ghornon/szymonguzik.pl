@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Img from 'gatsby-image';
-import { FormattedMessage } from 'react-intl';
 
 import scrollToElement from 'scroll-to-element';
 
@@ -16,9 +15,7 @@ import {
 	FaPaintBrush,
 	FaImage,
 	FaThumbtack,
-	FaDrumstickBite,
-	FaPen,
-	FaGithub
+	FaDrumstickBite
 } from 'react-icons/fa';
 
 const icons = [
@@ -33,23 +30,24 @@ const icons = [
 class DetailPageUI extends Component {
 	componentDidMount() {
 		setTimeout(() => {
-			const vw = window.innerWidth > 1200;
 			scrollToElement('#detail', {
-				align: vw ? 'middle' : 'top',
-				ease: 'inOutQuad',
-				duration: 600
+				ease: 'inOutExpo',
+				duration: 1000
 			});
-		}, 500);
+		}, 100);
 	}
 
 	createReferenceArray = order => {
 		const { Portfolio } = this.props;
 		const maxLength = [...this.props.Portfolio].length;
+
 		const previousOrderIndex = order <= 0 ? maxLength - 1 : order - 1;
-		const nextOrderIndex = order >= maxLength - 1 ? 0 : order + 1;
+		const lastOrderIndex = order >= maxLength - 1 ? 0 : order + 1;
+		const nextOrderIndex = lastOrderIndex >= maxLength - 1 ? 0 : lastOrderIndex + 1;
 
 		const referenceArray = [
 			Portfolio.find(({ order }) => order === previousOrderIndex),
+			Portfolio.find(({ order }) => order === lastOrderIndex),
 			Portfolio.find(({ order }) => order === nextOrderIndex)
 		];
 
@@ -92,33 +90,6 @@ class DetailPageUI extends Component {
 						{...this.props.pageData}
 						icon={icons.find(({ type: { displayName } }) => displayName === iconName)}
 					/>
-
-					<div className="detail__jumbotron jumbotron">
-						<header className="jumbotron__header">
-							<div className="detail__icon">
-								<FaPen />
-							</div>
-							<h6 className="detail__heading detail__heading--secondary">
-								<FormattedMessage id="Portfolio.header.heading-secondary" />
-							</h6>
-							<h4 className="detail__heading detail__heading--primary detail__heading--uppercase">
-								<FormattedMessage id="Portfolio.header.heading-primary" />
-							</h4>
-						</header>
-
-						<footer className="jumbotron__footer">
-							<p className="jumbotron__paragraph">
-								<FormattedMessage id="Portfolio.footer.firstline" />
-							</p>
-							<p className="detail__paragraph">
-								<FormattedMessage id="Portfolio.footer.secoundline" />
-								<a href="https://github.com/Ghornon" className="jumbotron__link">
-									github <FaGithub className="jumbotron__link-icon" />
-								</a>
-								<FormattedMessage id="Portfolio.footer.thirdline" />
-							</p>
-						</footer>
-					</div>
 
 					{referenceList}
 				</div>
