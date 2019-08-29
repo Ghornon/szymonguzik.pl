@@ -20,7 +20,7 @@ const DetailPageArticle = ({
 		</li>
 	));
 
-	const content = description ? description.description : '';
+	const content = description ? description.childContentfulRichText.html : '';
 
 	const SourceLink = () =>
 		sourceLink ? (
@@ -59,7 +59,11 @@ const DetailPageArticle = ({
 
 			<div className="detail__content">
 				<ul className="detail__stuck">{stuck}</ul>
-				{content}
+				<div
+					dangerouslySetInnerHTML={{
+						__html: content
+					}}
+				/>
 			</div>
 		</div>
 	);

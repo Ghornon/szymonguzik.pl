@@ -42,7 +42,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
 						shortDescription
 						description {
-							description
+							childContentfulRichText {
+								html
+							}
 						}
 
 						demoLink
