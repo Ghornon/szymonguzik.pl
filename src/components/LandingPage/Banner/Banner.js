@@ -51,7 +51,7 @@ const Banner = () => {
 										className="banner__button"
 										onClick={event => {
 											event.preventDefault();
-											scrollToElement('.about', {
+											scrollToElement('.portfolio', {
 												ease: 'inOutExpo',
 												duration: 1000
 											});

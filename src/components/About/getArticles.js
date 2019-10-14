@@ -58,23 +58,7 @@ const getArticles = ({ data, image }) => {
 				/>
 			),
 			icon: icons.find(({ type: { displayName } }) => displayName === element.iconName),
-			footer: (
-				<a
-					href={element.buttonTarget}
-					className="about__button"
-					onClick={event => {
-						event.preventDefault();
-						const vw = window.innerWidth > 1200;
-						scrollToElement(element.buttonTarget, {
-							align: vw ? 'middle' : 'top',
-							ease: 'inOutExpo',
-							duration: 1000
-						});
-					}}
-				>
-					{element.buttonLabel}
-				</a>
-			)
+			footer: <div />
 		};
 
 		articles.push(
