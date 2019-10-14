@@ -47,8 +47,8 @@
 	},
 	"Detail": {
 		"article": {
-			"code": "Kod",
-			"demo": "Strona"
+			"code": "Kod źródłowy",
+			"demo": "Strona demo"
 		}
 	}
 }

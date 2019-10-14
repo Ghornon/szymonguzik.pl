@@ -24,16 +24,16 @@ const DetailPageArticle = ({
 
 	const SourceLink = () =>
 		sourceLink ? (
-			<a href={sourceLink} className="detail__link">
-				<FaCode className="detail__link-icon" />{' '}
+			<a href={sourceLink} className="detail__button">
+				<FaCode className="detail__button-icon" />{' '}
 				<FormattedMessage id="Detail.article.code" />
 			</a>
 		) : null;
 
 	const DemoLink = () =>
 		demoLink ? (
-			<a href={demoLink} className="detail__link">
-				<FaDesktop className="detail__link-icon" />{' '}
+			<a href={demoLink} className="detail__button">
+				<FaDesktop className="detail__button-icon" />{' '}
 				<FormattedMessage id="Detail.article.demo" />
 			</a>
 		) : null;
@@ -50,7 +50,7 @@ const DetailPageArticle = ({
 				<h4 className="detail__heading detail__heading--primary detail__heading--uppercase">
 					{name}
 				</h4>
-
+				<ul className="detail__stuck">{stuck}</ul>
 				<h4 className="detail__heading detail__heading--link">
 					<SourceLink />
 					<DemoLink />
@@ -58,7 +58,6 @@ const DetailPageArticle = ({
 			</header>
 
 			<div className="detail__content">
-				<ul className="detail__stuck">{stuck}</ul>
 				<div
 					dangerouslySetInnerHTML={{
 						__html: content

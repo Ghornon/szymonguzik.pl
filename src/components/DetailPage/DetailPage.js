@@ -47,7 +47,7 @@ class DetailPageUI extends Component {
 
 		const referenceArray = [
 			Portfolio.find(({ order }) => order === previousOrderIndex),
-			Portfolio.find(({ order }) => order === lastOrderIndex),
+			// Portfolio.find(({ order }) => order === lastOrderIndex),
 			Portfolio.find(({ order }) => order === nextOrderIndex)
 		];
 
